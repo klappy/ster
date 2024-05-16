@@ -1,14 +1,16 @@
 /* eslint-disable react/prop-types, no-unused-vars */
 import React, { useEffect } from 'react';
 
-export default function Document({
-  nodes = {},
-  children,
-  content: _content,
-  className: _className,
-  verbose,
-  ...props
-}) {
+export default function Document(documentProps) {
+  const {
+    nodes = {},
+    children,
+    content: _content,
+    className: _className,
+    verbose,
+    ...props
+  } = documentProps;
+
   useEffect(() => {
     if (verbose) console.log('Document: Mount/First Render');
     return (() => {

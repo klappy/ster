@@ -36,17 +36,19 @@ const DEFAULT_PROPS = {
   sectionIndex: 0,
 };
 
-export default function EditableContent({
-  content,
-  onContent,
-  components: _components,
-  parsers,
-  joiners,
-  decorators,
-  sectionIndex,
-  verbose = false,
-  ...props
-}) {
+export default function EditableContent(editableContentProps) {
+  const {
+    content,
+    onContent,
+    components: _components,
+    parsers,
+    joiners,
+    decorators,
+    sectionIndex,
+    verbose = false,
+    ...props
+  } = editableContentProps;
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const components = useMemo(() => ({ ...DEFAULT_PROPS.components, ..._components }), []); // without empty dep for useMemo, components rerender from scratch every time.
   const { document: Document } = components;

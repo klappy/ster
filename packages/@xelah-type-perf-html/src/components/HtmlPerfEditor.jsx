@@ -11,16 +11,18 @@ import RecursiveBlock from "./RecursiveBlock";
 
 import HtmlSequenceEditor from "./HtmlSequenceEditor";
 
-export default function HtmlPerfEditor({
-  htmlPerf,
-  onHtmlPerf,
-  sequenceIds,
-  addSequenceId,
-  options,
-  components: _components,
-  handlers,
-  ...props
-}) {
+export default function HtmlPerfEditor(htmlPerfEditorProps) {
+  const {
+    htmlPerf,
+    onHtmlPerf,
+    sequenceIds,
+    addSequenceId,
+    options,
+    components: _components,
+    handlers,
+    ...props
+  } = htmlPerfEditorProps;
+
   const [sectionIndices, setSectionIndices] = useState({});
   const sequenceId = sequenceIds.at(-1);
 
