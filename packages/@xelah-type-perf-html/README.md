@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# [@xelah/type-perf-html](https://xelah-type-perf-html.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An implementation of STE for editing HtmlPerf, a block based format based on Epitelete/PERF.
 
-## Available Scripts
+This is a part of the [XELAH](https://github.com/xelahjs/xelah) collection of Libraries. 
 
-In the project directory, you can run:
+XELAH: Simple Text Editor for React is a collection of libraries that build on top of each other. 
 
-### `yarn start`
+The primary implementation will be focused on ste-perf-html but architected to be useful for other projects needing to edit strings parsable into sections and blocks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+See the  [XELAH ReadMe](https://github.com/xelahjs/xelah)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+See also [@xelah/core](https://xelah-core.netlify.app/) -- A core library that others extend to edit their respective file formats.
 
-### `yarn test`
+# Useful libraries:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Epitelete
+https://www.npmjs.com/package/epitelete
+https://github.com/Proskomma/epitelete
 
-### `yarn build`
+## Epitelete-Perf-Html
+https://www.npmjs.com/package/epitelete-perf-html
+https://github.com/unfoldingWord-box3/Epitelete-Perf-Html
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Xelah
+https://www.npmjs.com/org/xelah
+https://github.com/xelahjs/xelah 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Styleguide
 
-### `yarn eject`
+- [@xelah/type-perf-html](https://xelah-type-perf-html.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Some Reference Implementations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Scribe SE](https://github.com/bible-technology/scribe-scripture-editor)
+- [OCE-Editor=Tools](https://github.com/unfoldingword/oce-editor-tools)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Installation/First Steps
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+If you wish to use a package from this library in your app you will need to add it as a dependency with, for example:
+```sh
+npm install @xelah/type-perf-html
+```
+OR
+```shell
+yarn add @xelah/type-perf-html
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You will need to add the peer dependencies.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- CONTRIBUTING -->
+## Contributing
 
-### Code Splitting
+If you would like to contribute, then fork the repo and create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the Project
+2. Clone the repo
+   ```sh
+   git clone https://github.com/xelahjs/xelah.git
+   ```
+3. Install NPM packages
+   ```sh
+   yarn install
+   ```
+4. Run a package locally, for instance:
+   ```sh
+   yarn nx start @xelah/type-perf-html
+   ``` 
+5. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+6. Make your changes, then update what will be committed (`git add <file>`)
+7. Commit your changes with comment (`git commit -m "Add some AmazingFeature"`)
+8. Change the remote url to your fork (`git remote set-url origin https://github.com/(YourFork)/oce-editor-tools.git`)
+9. Push to the Branch
+10. Open a Pull Request
