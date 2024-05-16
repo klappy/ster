@@ -35,7 +35,7 @@ https://github.com/xelahjs/xelah
 ## Some Reference Implementations
 
 - [Scribe SE](https://github.com/bible-technology/scribe-scripture-editor)
-- [OCE-Editor=Tools](https://github.com/unfoldingword/oce-editor-tools)
+- [OCE-Editor-Tools](https://github.com/unfoldingword/oce-editor-tools)
 
 ## Installation/First Steps
 
