@@ -4,20 +4,22 @@ import React, { useEffect } from "react";
 import { getTarget } from "../core/getTarget";
 import HtmlPerfEditor from "./HtmlPerfEditor";
 
-export default function RecursiveBlock({
-  htmlPerf,
-  onHtmlPerf,
-  sequenceIds,
-  addSequenceId,
-  options,
-  content,
-  style,
-  contentEditable,
-  index,
-  verbose,
-  setFootNote,
-  ...props
-}) {
+export default function RecursiveBlock(recursiveBlockProps) {
+  const {
+    htmlPerf,
+    onHtmlPerf,
+    sequenceIds,
+    addSequenceId,
+    options,
+    content,
+    style,
+    contentEditable,
+    index,
+    verbose,
+    setFootNote,
+    ...props
+  } = recursiveBlockProps;
+
   useEffect(() => {
     if (verbose) console.log("Block: Mount/First Render", index);
     return () => {

@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 import { formatBlock, canFormatBlock } from '../../actions/formatBlock'
 
-export default function FormatBlock({label, subtype, sequence}) {
+export default function FormatBlock(formatBlockProps) {
+  const {label, subtype, sequence} = formatBlockProps;
 
   const [show, setShow] = useState( canFormatBlock( { sequence } ) );
   const handleSelectionChangeEvent = useCallback(() => {

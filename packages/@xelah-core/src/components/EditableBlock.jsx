@@ -28,18 +28,20 @@ A React component for editing any block, for instance a PERF Block.
 @todo refine prop types
 @see [PERF blocks]{@link https://doc.proskomma.bible/en/latest/__old/user_model/building_blocks.html#block} 
 */
-function EditableBlock({
-  content,
-  onContent,
-  decorators,
-  style,
-  onClick,
-  components: _components,
-  options,
-  index,
-  verbose = false,
-  ...props
-}) {
+function EditableBlock(editableBlockComponentProps) {
+  const {
+    content,
+    onContent,
+    decorators,
+    style,
+    onClick,
+    components: _components,
+    options,
+    index,
+    verbose = false,
+    ...props
+  } = editableBlockComponentProps;
+
   const components = { ...DEFAULT_PROPS.components, ..._components };
   const { block: Block } = components || {};
 

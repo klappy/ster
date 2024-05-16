@@ -23,19 +23,21 @@ const DEFAULT_PROPS = {
   },
 };
 
-export default function HtmlSequenceEditor({
-  htmlSequence,
-  onHtmlSequence: _onHtmlSequence,
-  options: _options,
-  components: _components,
-  parsers: _parsers,
-  joiners: _joiners,
-  decorators: _decorators,
-  handlers,
-  sectionIndex,
-  verbose = false,
-  ...props
-}) {
+export default function HtmlSequenceEditor(htmlSequenceEditorProps) {
+  const {
+    htmlSequence,
+    onHtmlSequence: _onHtmlSequence,
+    options: _options,
+    components: _components,
+    parsers: _parsers,
+    joiners: _joiners,
+    decorators: _decorators,
+    handlers,
+    sectionIndex,
+    verbose = false,
+    ...props
+  } = htmlSequenceEditorProps;
+
   const decorators = { ...DEFAULT_PROPS.decorators, ..._decorators };
   const joiners = { ...DEFAULT_PROPS.joiners, ..._joiners };
 

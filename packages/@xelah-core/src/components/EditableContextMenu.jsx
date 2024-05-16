@@ -55,11 +55,13 @@ const DEFAULT_PROPS = {
   ],
 };
 
-export default function EditableContextMenu({
-  components: _components,
-  save,
-  children,
-}) {
+export default function EditableContextMenu(editableContextMenuProps) {
+  const {
+    components: _components,
+    save,
+    children,
+  } = editableContextMenuProps;
+  
   const defaultState = useMemo(
     () => ({
       menuPosition: undefined,

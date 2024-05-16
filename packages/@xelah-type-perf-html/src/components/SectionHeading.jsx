@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 
-// eslint-disable-next-line react/prop-types, no-unused-vars
-export default function SectionHeading({ type: _type, content, show, index, verbose, ...props }) {
+export default function SectionHeading(sectionHeadingProps) {
+  // eslint-disable-next-line react/prop-types, no-unused-vars
+  const { type: _type, content, show, index, verbose, ...props } = sectionHeadingProps;
+
   useEffect(() => {
     if (verbose) console.log('SectionHeading: Mount/First Render', index);
     return (() => {

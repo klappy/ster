@@ -34,19 +34,21 @@ const headingStyle = {
   contentOverflow: 'ellipsis',
 };
 
-export default function EditableSection({
-  content,
-  onContent,
-  parsers,
-  joiners,
-  decorators,
-  index,
-  onShow,
-  show,
-  dir,
-  verbose = false,
-  ...props
-}) {
+export default function EditableSection(editableSectionProps) {
+  const {
+    content,
+    onContent,
+    parsers,
+    joiners,
+    decorators,
+    index,
+    onShow,
+    show,
+    dir,
+    verbose = false,
+    ...props
+  } = editableSectionProps;
+
   const components = { ...DEFAULT_PROPS.components, ...props.components };
   const { section: Section, sectionHeading: SectionHeading, sectionBody: SectionBody } = components || {};
   const options = { ...DEFAULT_PROPS.options, ...props.options };
